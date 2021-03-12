@@ -1,81 +1,59 @@
-<h2 align="center">Bootstrap 4.6 | Starter Template</h2>
+<h1 align="center">FreeCodeCamp Certification</h1>
 
-<p align="center">A NPM template project for Bootstrap prototyping and customization.</p>
-
-<hr>
-
-### Summary
-
-- [About](#about)
-- [Main Files](#main-files)
-- [Usage](#usage)
-- [Scripts](#scripts)
-- [Copyright](#copyright)
+<h2 align="center">Responsive Web Design Projects - Build a Survey Form</h2>
 
 <hr>
 
-### [About](#about)
+### Objective
 
-`bootstrap4-starter-template` is a template for building Bootstrap 4.6 projects, using NPM. You can use it for prototyping and specially for customizing Bootstrap themes. It was **inspired** by the [bootstrap-npm-starter](https://github.com/twbs/bootstrap-npm-starter), made by [@mdo](https://twitter.com/mdo). **It's neither a fork nor a copy**, I built it from scratch using my own project file structure and with the tools I like. For example, I switched from [node-sass](https://www.npmjs.com/package/node-sass) (because it's now deprecated) to [Dart Sass](https://sass-lang.com/dart-sass). I also removed [nodemon](https://www.npmjs.com/package/nodemon) and [serve](https://www.npmjs.com/package/serve) to use [lite-server](https://www.npmjs.com/package/lite-server) instead, for simplicity. [Popper.JS](https://popper.js.org/), [jQuery](https://jquery.com/) and Bootstrap JS (`bootstrap.min.js`) are being provided separately via CDN.
+Build a [CodePen.io](https://codepen.io) app that is functionally similar to this: <https://codepen.io/freeCodeCamp/full/VPaoNP>.
 
-<hr>
+Fulfill the below [user stories](#user-stories) and get all of the tests to pass. Give it your own personal style.
 
-### [Main Files](#main-files)
-
-- An HTML page (`src/index.html`) with a simple `jumbotron` and `modal` to test Bootstrap and JavaScript;
-- [Bootstrap](https://getbootstrap.com) (currently using v4.6.0), source files via NPM;
-- NPM scripts (`package.json`) for useful tasks (consult the [Scripts section](#scripts) for more detailed information);
-- Stylesheet (`src/scss/main.scss`) to import Bootstrap Sass partials and custom variables;
-- Stylesheet (`scss/_custom-variables.scss`) to override Bootstrap and make your own variables;
+You can use HTML, JavaScript, and CSS to complete this project. Plain CSS is recommended because that is what the lessons have covered so far and you should get some practice with plain CSS. You can use Bootstrap or SASS if you choose. Additional technologies (just for example jQuery, React, Angular, or Vue) are not recommended for this project, and using them is at your own risk. Other projects will give you a chance to work with different technology stacks like React. We will accept and try to fix all issue reports that use the suggested technology stack for this project. Happy coding!
 
 <hr>
 
-### [Usage](#usage)
+### [User Stories](#user-stories)
 
-**You'll need [Node.js](https://nodejs.org/) and [Git](https://git-scm.com/) installed to clone and run this project.**
+**User Story #1**: I can see a title with `id="title"` in H1 sized text.
 
-First, clone the repository and get into the project's folder
+**User Story #2**: I can see a short explanation with `id="description"` in P sized text.
 
-```shell
-git clone https://github.com/evfjunior/bootstrap4-starter-template.git
-cd bootstrap4-starter-template
-```
+**User Story #3**: I can see a form with `id="survey-form"`.
 
-Install packages and dependencies
+**User Story #4**: Inside the form element, I am required to enter my name in a field with `id="name"`.
 
-```shell
-npm i
-```
+**User Story #5**: Inside the form element, I am required to enter an email in a field with `id="email"`.
 
-Start the demo project...
+**User Story #6**: If I enter an email that is not formatted correctly, I will see an HTML5 validation error.
 
-```shell
-npm start
-```
+**User Story #7**: Inside the form, I can enter a number in a field with `id="number"`.
 
-...or start coding (Sass will watch for changes).
+**User Story #8**: If I enter non-numbers in the number input, I will see an HTML5 validation error.
 
-```shell
-npm run dev
-```
+**User Story #9**: If I enter numbers outside the range of the number input, which are defined by the min and max attributes, I will see an HTML5 validation error.
 
-<hr>
+**User Story #10**: For the name, email, and number input fields inside the form I can see corresponding labels that describe the purpose of each field with the following ids: `id="name-label"`, `id="email-label"`, and `id="number-label"`.
 
-### [Scripts](#scripts)
+**User Story #11**: For the name, email, and number input fields, I can see placeholder text that gives me a description or instructions for each field.
 
-- **`compile-watch`**: Runs [Dart Sass](https://sass-lang.com/dart-sass) with the `--watch` flag to watch for changes during development;
-- **`compile-css`**: Only compiles source SASS to CSS without watching;
-- **`server`**: Starts [lite-server](https://www.npmjs.com/package/lite-server), configured to open `src/index.html` on default port (3000);
-- **`prefix-css`**: Runs [Autoprefixer](https://github.com/postcss/autoprefixer) on the compiled `src/css/main.css`;
-- **`purge-css`**: Runs [PurgeCSS](https://purgecss.com) to clean and remove unused CSS rules;
-- **`build-css`**: Runs `compile-css` and `prefix-css`;
-- **`lint-css`**: Runs a Linter using the official Bootstrap's Stylelint configuration, [stylelint-config-twbs-bootstrap](https://github.com/twbs/stylelint-config-twbs-bootstrap). You can use it to configure your [Github Actions](https://github.com/features/actions) workflow (`ci.yml` file not included);
-- **`dev`**: Runs `compile-watch` and `server` for development environment;
-- **`build`**: Runs `lint-css`, `build-css` and `purge-css` to build a production-ready version;
-- **`start`**: Runs `build` and `server` to demo the final project.
+**User Story #12**: Inside the form element, I can select an option from a dropdown that has a corresponding `id="dropdown"`.
+
+**User Story #13**: Inside the form element, I can select a field from one or more groups of radio buttons. Each group should be grouped using the `name` attribute.
+
+**User Story #14**: Inside the form element, I can select several fields from a series of checkboxes, each of which must have a `value` attribute.
+
+**User Story #15**: Inside the form element, I am presented with a `textarea` at the end for additional comments.
+
+**User Story #16**: Inside the form element, I am presented with a button with `id="submit"` to submit all my inputs.
+
+You can build your project by forking this [CodePen pen](https://codepen.io/freeCodeCamp/pen/MJjpwO). Or you can use this CDN link to run the tests in any environment you like: https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js.
+
+Once you're done, submit the URL to your working project with all its tests passing.
 
 <hr>
 
-### [Copyright](#copyright)
+### Copyright
 
-&copy; evfjunior 2021 and licensed MIT.
+&copy; 2021 - evfjunior
