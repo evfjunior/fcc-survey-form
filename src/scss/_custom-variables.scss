@@ -1,29 +1,55 @@
-// Override Bootstrap variables
+// Material Colors
+$black: #212121;
+$cyan: #0097a7;
+$gray: #b0bec5;
+$orange: #ff6f00;
+$red: #d32f2f;
+$white: #f5f5f5;
 
-// Color system
-$black: #121212;
-$white: #c7c7c7;
+// Bootstrap overrides
+$body-bg: $gray;
+$body-color: $black;
 
-$body-bg: $black;
-$body-color: $white;
+$primary: $cyan;
+$secondary: $orange;
+$danger: $red;
 
 $theme-colors: (
-  primary: $purple,
-  secondary: $white,
+  primary: $primary,
+  secondary: $secondary,
+  danger: $danger,
 );
 
-// Custom colors
-$dark-gray: lighten($black, 5%);
-$muted-gray: lighten($black, 20%);
-
 // Options
-$enable-shadows: true;
 $enable-responsive-font-sizes: true;
+$enable-shadows: true;
 
-// Jumbotron
-$jumbotron-bg: $dark-gray;
+$box-shadow: 0 0.5rem 1rem rgba($black, 0.5);
 
-// Modal
-$modal-content-bg: $dark-gray;
-$modal-header-border-color: $muted-gray;
-$modal-footer-border-color: $muted-gray;
+// Grid
+$grid-gutter-width: 36px;
+
+// Typography
+$font-family-base: "Dosis", $font-family-sans-serif;
+
+// Components
+$component-active-color: $white;
+$component-active-bg: theme-color("primary");
+
+$border-width: 2px;
+$input-btn-border-width: $border-width;
+$btn-border-width: $input-btn-border-width;
+
+// Form
+$input-btn-focus-color: rgba($component-active-bg, 0.25);
+$input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color;
+$input-focus-border-color: lighten($component-active-bg, 25%);
+$input-focus-box-shadow: $input-btn-focus-box-shadow;
+
+// Custom Form Elements
+$custom-control-indicator-checked-color: $component-active-color;
+$custom-control-indicator-checked-bg: $component-active-bg;
+$custom-control-indicator-checked-border-color: $custom-control-indicator-checked-bg;
+
+$custom-control-indicator-focus-box-shadow: $input-focus-box-shadow;
+$custom-control-indicator-focus-border-color: $input-focus-border-color;

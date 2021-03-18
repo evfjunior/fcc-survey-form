@@ -8,11 +8,18 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Test scripts -->
-    <script
+    <!-- <script
       src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
       defer
-    ></script>
+    ></script> -->
 
     <!-- Bootstrap and custom styles -->
     <link rel="stylesheet" href="css/main.css" />
@@ -43,164 +50,229 @@
     <title>FCC Certification | Survey Form</title>
   </head>
   <body>
-    <header class="container-fluid">
+    <header class="container-fluid text-center p-5">
       <h1 id="title">FCC Certification</h1>
       <h2>Responsive Web Design</h2>
       <p id="description">Survey Form</p>
     </header>
-    <main class="container">
-      <form id="survey-form" action="#" method="POST">
-        <!-- Name -->
-        <div class="form-group">
-          <label for="name" id="name-label">Full Name (required)</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="John Doe"
-            required
-          />
-        </div>
 
-        <!-- Email -->
-        <div class="form-group">
-          <label for="email" id="email-label">Email Address (required)</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="example@email.com"
-            required
-          />
-        </div>
-
-        <!-- Number -->
-        <div class="form-group">
-          <label for="number" id="number-label">Number</label>
-          <input
-            type="number"
-            id="number"
-            name="number"
-            min="1"
-            max="5"
-            placeholder="1 - 5"
-          />
-        </div>
-
-        <!-- Dropdown (select) -->
-        <div class="form-group">
-          <label for="dropdown">Dropdown</label>
-          <select name="dropdown" id="dropdown" name="dropdown">
-            <option selected disabled value>Select one...</option>
-            <option value="Lorem ipsum">Lorem ipsum</option>
-            <option value="Dolor sit amet">Dolor sit amet</option>
-            <option value="Consectetur adipisicing">
-              Consectetur adipisicing
-            </option>
-          </select>
-        </div>
-
-        <!-- Radio -->
-        <div class="form-check">
-          <fieldset>
-            <legend>Radios</legend>
-            <input
-              type="radio"
-              class="form-check-input"
-              name="radio"
-              id="radio-1"
-              value="Sed do eiusmod"
-            />
-            <label for="radio-1" class="form-check-label">Sed do eiusmod</label>
-
-            <input
-              type="radio"
-              class="form-check-input"
-              name="radio"
-              id="radio-2"
-              value="Tempor incididunt"
-            />
-            <label for="radio-2" class="form-check-label">
-              Tempor incididunt
+    <main class="container p-4">
+      <form
+        class="p-4 shadow rounded"
+        id="survey-form"
+        action="#"
+        method="POST"
+      >
+        <div class="form-row">
+          <!-- Name -->
+          <div class="form-group col-12 col-md-6">
+            <label for="name" id="name-label">
+              <strong>Full Name (required)</strong>
             </label>
-
             <input
-              type="radio"
-              class="form-check-input"
-              name="radio"
-              id="radio-3"
-              value="Ut labore et dolore"
+              class="form-control"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="John Doe"
+              required
             />
-            <label for="radio-3" class="form-check-label">
-              Ut labore et dolore
+          </div>
+
+          <!-- Email -->
+          <div class="form-group col-12 col-md-6">
+            <label for="email" id="email-label">
+              <strong>Email Address (required)</strong>
             </label>
+            <input
+              class="form-control"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@email.com"
+              required
+            />
+          </div>
+        </div>
+        <!-- /.form-row -->
+
+        <div class="form-row">
+          <!-- Number -->
+          <div class="form-group col-12 col-md-6">
+            <label for="number" id="number-label">
+              <strong>Number</strong>
+            </label>
+            <input
+              class="form-control"
+              type="number"
+              id="number"
+              name="number"
+              min="1"
+              max="5"
+              placeholder="1 - 5"
+            />
+          </div>
+
+          <!-- Dropdown (select) -->
+          <div class="form-group col-12 col-md-6">
+            <label for="dropdown">
+              <strong>Dropdown</strong>
+            </label>
+            <select
+              class="form-control"
+              name="dropdown"
+              id="dropdown"
+              name="dropdown"
+            >
+              <option selected disabled value>Select one...</option>
+              <option value="Lorem ipsum">Lorem ipsum</option>
+              <option value="Dolor sit amet">Dolor sit amet</option>
+              <option value="Consectetur adipisicing">
+                Consectetur adipisicing
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <!-- Radio -->
+          <fieldset class="col-12 col-md-6">
+            <legend class="col-form-label">
+              <strong>Radio</strong>
+            </legend>
+            <div class="custom-control custom-radio">
+              <input
+                type="radio"
+                class="custom-control-input"
+                name="radio"
+                id="radio-1"
+                value="Sed do eiusmod"
+              />
+              <label for="radio-1" class="custom-control-label">
+                Sed do eiusmod
+              </label>
+            </div>
+
+            <div class="custom-control custom-radio">
+              <input
+                type="radio"
+                class="custom-control-input"
+                name="radio"
+                id="radio-2"
+                value="Tempor incididunt"
+              />
+              <label for="radio-2" class="custom-control-label">
+                Tempor incididunt
+              </label>
+            </div>
+
+            <div class="custom-control custom-radio">
+              <input
+                type="radio"
+                class="custom-control-input"
+                name="radio"
+                id="radio-3"
+                value="Ut labore et dolore"
+              />
+              <label for="radio-3" class="custom-control-label">
+                Ut labore et dolore
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="col-12 col-md-6">
+            <legend class="col-form-label">
+              <strong>Checkboxes</strong>
+            </legend>
+            <div class="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                name="checkbox"
+                id="checkbox-1"
+                value="Magna aliqua"
+              />
+              <label for="checkbox-1" class="custom-control-label">
+                Magna aliqua
+              </label>
+            </div>
+
+            <div class="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                name="checkbox"
+                id="checkbox-2"
+                value="Eu feugiat pretium"
+              />
+              <label for="checkbox-2" class="custom-control-label">
+                Eu feugiat pretium
+              </label>
+            </div>
+
+            <div class="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                name="checkbox"
+                id="checkbox-3"
+                value="Nibh ipsum"
+              />
+              <label for="checkbox-3" class="custom-control-label">
+                Nibh ipsum
+              </label>
+            </div>
+
+            <div class="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                name="checkbox"
+                id="checkbox-4"
+                value="Sed risus pretium"
+              />
+              <label for="checkbox-4" class="custom-control-label">
+                Sed risus pretium
+              </label>
+            </div>
           </fieldset>
         </div>
+        <!-- /.form-row -->
 
-        <!-- Checkboxes -->
-        <div class="form-check">
-          <fieldset>
-            <legend>Checkboxes</legend>
-            <input
-              type="checkbox"
-              class="form-check-input"
-              name="checkbox"
-              id="checkbox-1"
-              value="Magna aliqua"
-            />
-            <label for="checkbox-1" class="form-check-label">
-              Magna aliqua
-            </label>
-
-            <input
-              type="checkbox"
-              class="form-check-input"
-              name="checkbox"
-              id="checkbox-1"
-              value="Eu feugiat pretium"
-            />
-            <label for="checkbox-1" class="form-check-label">
-              Eu feugiat pretium
-            </label>
-
-            <input
-              type="checkbox"
-              class="form-check-input"
-              name="checkbox"
-              id="checkbox-1"
-              value="Nibh ipsum"
-            />
-            <label for="checkbox-1" class="form-check-label">
-              Nibh ipsum
-            </label>
-
-            <input
-              type="checkbox"
-              class="form-check-input"
-              name="checkbox"
-              id="checkbox-1"
-              value="Sed risus pretium"
-            />
-            <label for="checkbox-1" class="form-check-label">
-              Sed risus pretium
-            </label>
+        <div class="form-row">
+          <!-- Textarea -->
+          <fieldset class="col-12">
+            <legend class="col-form-label">
+              <strong>Textarea</strong>
+            </legend>
+            <textarea
+              class="form-control"
+              name="textarea"
+              id="textarea"
+              rows="3"
+              placeholder="Write your message here..."
+            ></textarea>
           </fieldset>
         </div>
+        <!-- /.form-row -->
 
-        <!-- Textarea -->
-        <fieldset>
-          <legend>Textarea</legend>
-          <textarea
-            name="textarea"
-            id="textarea"
-            rows="3"
-            placeholder="Your message goes here..."
-          ></textarea>
-        </fieldset>
+        <div class="form-row mt-4 d-flex justify-content-between">
+          <button
+            type="submit"
+            class="col btn btn-primary text-uppercase mr-3"
+            id="submit"
+          >
+            Submit
+          </button>
 
-        <button type="submit" class="btn btn-primary" id="submit">
-          Submit
-        </button>
+          <button
+            type="reset"
+            class="col btn btn-outline-secondary text-uppercase"
+            id="reset"
+          >
+            Clear
+          </button>
+        </div>
       </form>
     </main>
   </body>
