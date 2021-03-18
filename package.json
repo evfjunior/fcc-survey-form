@@ -12,7 +12,7 @@
     "build-css": "npm-run-all compile-css prefix-css",
     "lint-scss": "stylelint src/scss/",
     "dev": "npm-run-all --parallel compile-watch server",
-    "build": "npm-run-all lint-css build-css purge-css",
+    "build": "npm-run-all build-css purge-css",
     "start": "npm-run-all build server"
   },
   "repository": {
@@ -33,9 +33,7 @@
     "postcss": "^8.2.7",
     "postcss-cli": "^8.3.1",
     "purgecss": "^4.0.2",
-    "sass": "^1.32.8",
-    "stylelint": "^13.12.0",
-    "stylelint-config-twbs-bootstrap": "^2.1.0"
+    "sass": "^1.32.8"
   },
   "dependencies": {
     "bootstrap": "^4.6.0"
