@@ -47,6 +47,9 @@
       defer
     ></script>
 
+    <!-- Form validation -->
+    <script src="js/form-validation.js" defer></script>
+
     <title>FCC Certification | Survey Form</title>
   </head>
   <body>
@@ -58,10 +61,11 @@
 
     <main class="container p-4">
       <form
-        class="p-4 shadow rounded"
+        class="p-4 shadow rounded needs-validation"
         id="survey-form"
-        action="#"
+        action=""
         method="POST"
+        novalidate
       >
         <div class="form-row">
           <!-- Name -->
@@ -77,6 +81,7 @@
               placeholder="John Doe"
               required
             />
+            <div class="invalid-feedback">Please, provide your full name</div>
           </div>
 
           <!-- Email -->
@@ -92,6 +97,9 @@
               placeholder="example@email.com"
               required
             />
+            <div class="invalid-feedback">
+              Please, provide a valid email address
+            </div>
           </div>
         </div>
         <!-- /.form-row -->
