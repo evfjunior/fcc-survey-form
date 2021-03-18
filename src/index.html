@@ -8,6 +8,19 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Test scripts -->
+    <!-- <script
+      src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
+      defer
+    ></script> -->
+
     <!-- Bootstrap and custom styles -->
     <link rel="stylesheet" href="css/main.css" />
 
@@ -34,85 +47,241 @@
       defer
     ></script>
 
-    <title>Bootstrap 4.6 | Starter Template</title>
+    <!-- Form validation -->
+    <script src="js/form-validation.js" defer></script>
+
+    <title>FCC Certification | Survey Form</title>
   </head>
   <body>
-    <main
-      class="container d-flex flex-column align-items-center justify-content-center vh-100"
-    >
-      <section class="jumbotron text-center">
-        <h1 class="display-4">Starter Template</h1>
-        <p class="lead">
-          This is a template for Bootstrap 4.6 projects using NPM.
-        </p>
+    <header class="container-fluid text-center p-5">
+      <h1 id="title">FCC Certification</h1>
+      <h2>Responsive Web Design</h2>
+      <p id="description">Survey Form</p>
+    </header>
 
-        <hr class="my-3" />
-
-        <p class="mb-5">
-          To be sure everything is working, click the button below to test
-          JavaScript configuration.
-        </p>
-
-        <!-- Button trigger modal -->
-        <button
-          type="button"
-          class="btn btn-primary"
-          data-toggle="modal"
-          data-target="#exampleModal"
-        >
-          Launch Modal
-        </button>
-
-        <!-- Modal window  -->
-        <div
-          class="modal fade"
-          id="exampleModal"
-          tabindex="-1"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">It's working!</h5>
-                <!-- Close button -->
-                <button
-                  type="button"
-                  class="close"
-                  data-dismiss="modal"
-                  aria-label="Close"
-                >
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <!-- /.modal-header -->
-              <div class="modal-body my-4">
-                <p>
-                  If you're seeing this modal window, the project is setup
-                  properly and you're ready to start coding.
-                </p>
-              </div>
-              <!-- /.modal-body -->
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-dismiss="modal"
-                >
-                  Close
-                </button>
-                <button type="button" class="btn btn-primary">Got it!</button>
-              </div>
-              <!-- /.modal-footer -->
-            </div>
-            <!-- /.modal-content -->
+    <main class="container p-4">
+      <form
+        class="p-4 shadow rounded needs-validation"
+        id="survey-form"
+        action=""
+        method="POST"
+        novalidate
+      >
+        <div class="form-row">
+          <!-- Name -->
+          <div class="form-group col-12 col-md-6">
+            <label for="name" id="name-label">
+              <strong>Full Name (required)</strong>
+            </label>
+            <input
+              class="form-control"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="John Doe"
+              required
+            />
+            <div class="invalid-feedback">Please, provide your full name</div>
           </div>
-          <!-- /.modal-dialog -->
+
+          <!-- Email -->
+          <div class="form-group col-12 col-md-6">
+            <label for="email" id="email-label">
+              <strong>Email Address (required)</strong>
+            </label>
+            <input
+              class="form-control"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@email.com"
+              required
+            />
+            <div class="invalid-feedback">
+              Please, provide a valid email address
+            </div>
+          </div>
         </div>
-        <!-- /.modal -->
-      </section>
-      <!-- /.jumbotron -->
+        <!-- /.form-row -->
+
+        <div class="form-row">
+          <!-- Number -->
+          <div class="form-group col-12 col-md-6">
+            <label for="number" id="number-label">
+              <strong>Number</strong>
+            </label>
+            <input
+              class="form-control"
+              type="number"
+              id="number"
+              name="number"
+              min="1"
+              max="5"
+              placeholder="1 - 5"
+            />
+          </div>
+
+          <!-- Dropdown (select) -->
+          <div class="form-group col-12 col-md-6">
+            <label for="dropdown">
+              <strong>Dropdown</strong>
+            </label>
+            <select
+              class="form-control"
+              name="dropdown"
+              id="dropdown"
+              name="dropdown"
+            >
+              <option selected disabled value>Select one...</option>
+              <option value="Lorem ipsum">Lorem ipsum</option>
+              <option value="Dolor sit amet">Dolor sit amet</option>
+              <option value="Consectetur adipisicing">
+                Consectetur adipisicing
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <!-- Radio -->
+          <fieldset class="col-12 col-md-6">
+            <legend class="col-form-label">
+              <strong>Radio</strong>
+            </legend>
+            <div class="custom-control custom-radio">
+              <input
+                type="radio"
+                class="custom-control-input"
+                name="radio"
+                id="radio-1"
+                value="Sed do eiusmod"
+              />
+              <label for="radio-1" class="custom-control-label">
+                Sed do eiusmod
+              </label>
+            </div>
+
+            <div class="custom-control custom-radio">
+              <input
+                type="radio"
+                class="custom-control-input"
+                name="radio"
+                id="radio-2"
+                value="Tempor incididunt"
+              />
+              <label for="radio-2" class="custom-control-label">
+                Tempor incididunt
+              </label>
+            </div>
+
+            <div class="custom-control custom-radio">
+              <input
+                type="radio"
+                class="custom-control-input"
+                name="radio"
+                id="radio-3"
+                value="Ut labore et dolore"
+              />
+              <label for="radio-3" class="custom-control-label">
+                Ut labore et dolore
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="col-12 col-md-6">
+            <legend class="col-form-label">
+              <strong>Checkboxes</strong>
+            </legend>
+            <div class="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                name="checkbox"
+                id="checkbox-1"
+                value="Magna aliqua"
+              />
+              <label for="checkbox-1" class="custom-control-label">
+                Magna aliqua
+              </label>
+            </div>
+
+            <div class="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                name="checkbox"
+                id="checkbox-2"
+                value="Eu feugiat pretium"
+              />
+              <label for="checkbox-2" class="custom-control-label">
+                Eu feugiat pretium
+              </label>
+            </div>
+
+            <div class="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                name="checkbox"
+                id="checkbox-3"
+                value="Nibh ipsum"
+              />
+              <label for="checkbox-3" class="custom-control-label">
+                Nibh ipsum
+              </label>
+            </div>
+
+            <div class="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                name="checkbox"
+                id="checkbox-4"
+                value="Sed risus pretium"
+              />
+              <label for="checkbox-4" class="custom-control-label">
+                Sed risus pretium
+              </label>
+            </div>
+          </fieldset>
+        </div>
+        <!-- /.form-row -->
+
+        <div class="form-row">
+          <!-- Textarea -->
+          <fieldset class="col-12">
+            <legend class="col-form-label">
+              <strong>Textarea</strong>
+            </legend>
+            <textarea
+              class="form-control"
+              name="textarea"
+              id="textarea"
+              rows="3"
+              placeholder="Write your message here..."
+            ></textarea>
+          </fieldset>
+        </div>
+        <!-- /.form-row -->
+
+        <div class="form-row mt-4 d-flex justify-content-between">
+          <button
+            type="submit"
+            class="col btn btn-primary text-uppercase mr-3"
+            id="submit"
+          >
+            Submit
+          </button>
+
+          <button
+            type="reset"
+            class="col btn btn-outline-secondary text-uppercase"
+            id="reset"
+          >
+            Clear
+          </button>
+        </div>
+      </form>
     </main>
-    <!-- /.container -->
   </body>
 </html>
