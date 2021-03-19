@@ -10,7 +10,6 @@
     "prefix-css": "postcss --replace src/css/main.css --use autoprefixer --map",
     "purge-css": "purgecss --css src/css/main.css --content src/index.html --output src/css/",
     "build-css": "npm-run-all compile-css prefix-css",
-    "lint-scss": "stylelint src/scss/",
     "dev": "npm-run-all --parallel compile-watch server",
     "build": "npm-run-all build-css purge-css",
     "start": "npm-run-all build server"
