@@ -11,15 +11,9 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&family=Share+Tech+Mono&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Test scripts -->
-    <!-- <script
-      src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
-      defer
-    ></script> -->
 
     <!-- Bootstrap and custom styles -->
     <link rel="stylesheet" href="css/main.css" />
@@ -50,6 +44,12 @@
     <!-- Form validation -->
     <script src="js/form-validation.js" defer></script>
 
+    <!-- Test scripts -->
+    <!-- <script
+      src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
+      defer
+    ></script> -->
+
     <title>FCC Certification | Survey Form</title>
   </head>
   <body>
@@ -70,27 +70,27 @@
         <div class="form-row">
           <!-- Name -->
           <div class="form-group col-12 col-md-6">
-            <label for="name" id="name-label">
-              <strong>Full Name (required)</strong>
+            <label class="font-weight-bold" for="name" id="name-label">
+              Full Name (required)
             </label>
             <input
-              class="form-control"
+              class="form-control text-monospace"
               type="text"
               id="name"
               name="name"
               placeholder="John Doe"
               required
             />
-            <div class="invalid-feedback">Please, provide your full name</div>
+            <div class="invalid-feedback">Please, enter your full name</div>
           </div>
 
           <!-- Email -->
           <div class="form-group col-12 col-md-6">
-            <label for="email" id="email-label">
-              <strong>Email Address (required)</strong>
+            <label class="font-weight-bold" for="email" id="email-label">
+              Email Address (required)
             </label>
             <input
-              class="form-control"
+              class="form-control text-monospace"
               type="email"
               id="email"
               name="email"
@@ -107,11 +107,11 @@
         <div class="form-row">
           <!-- Number -->
           <div class="form-group col-12 col-md-6">
-            <label for="number" id="number-label">
-              <strong>Number</strong>
+            <label class="font-weight-bold" for="number" id="number-label">
+              Number
             </label>
             <input
-              class="form-control"
+              class="form-control text-monospace"
               type="number"
               id="number"
               name="number"
@@ -119,13 +119,14 @@
               max="5"
               placeholder="1 - 5"
             />
+            <div class="invalid-feedback">
+              Please, insert a value between 1 and 5
+            </div>
           </div>
 
           <!-- Dropdown (select) -->
           <div class="form-group col-12 col-md-6">
-            <label for="dropdown">
-              <strong>Dropdown</strong>
-            </label>
+            <label class="font-weight-bold" for="dropdown">Dropdown</label>
             <select
               class="form-control"
               name="dropdown"
@@ -145,9 +146,7 @@
         <div class="form-row">
           <!-- Radio -->
           <fieldset class="col-12 col-md-6">
-            <legend class="col-form-label">
-              <strong>Radio</strong>
-            </legend>
+            <legend class="col-form-label font-weight-bold">Radio</legend>
             <div class="custom-control custom-radio">
               <input
                 type="radio"
@@ -189,9 +188,7 @@
           </fieldset>
 
           <fieldset class="col-12 col-md-6">
-            <legend class="col-form-label">
-              <strong>Checkboxes</strong>
-            </legend>
+            <legend class="col-form-label font-weight-bold">Checkboxes</legend>
             <div class="custom-control custom-checkbox">
               <input
                 type="checkbox"
@@ -250,11 +247,9 @@
         <div class="form-row">
           <!-- Textarea -->
           <fieldset class="col-12">
-            <legend class="col-form-label">
-              <strong>Textarea</strong>
-            </legend>
+            <legend class="col-form-label font-weight-bold">Textarea</legend>
             <textarea
-              class="form-control"
+              class="form-control text-monospace"
               name="textarea"
               id="textarea"
               rows="3"
@@ -281,6 +276,7 @@
             Clear
           </button>
         </div>
+        <!-- /.form-row -->
       </form>
     </main>
   </body>
